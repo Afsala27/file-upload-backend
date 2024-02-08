@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Google.Apis.Auth.OAuth2;
 using Google.Apis.Drive.v3;
 using Google.Apis.Services;
-//using FileUploadApplication.Services;
+using FileUploadApplication.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,7 +17,7 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<DataContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-//builder.Services.AddScoped<GoogleDriveService>();
+builder.Services.AddScoped<GoogleDriveService>();
 
 builder.Services.AddScoped<IValidator<UserData>, UserDataValidator>();
 builder.Services.AddScoped<IValidator<ImgData>, ImgDataValidator>();
