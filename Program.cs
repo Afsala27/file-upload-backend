@@ -22,6 +22,16 @@ builder.Services.AddScoped<GoogleDriveService>();
 builder.Services.AddScoped<IValidator<UserData>, UserDataValidator>();
 builder.Services.AddScoped<IValidator<ImgData>, ImgDataValidator>();
 
+builder.Services.AddCors(options => {
+    options.AddPolicy("AllowSpecificOrigin",
+                builder =>
+                {
+                    builder.WithOrigins("http://localhost:3000") // Adjust this to your frontend URL
+                           .AllowAnyHeader()
+                           .AllowAnyMethod();
+                });
+});
+
 builder.Services.AddControllersWithViews();
 
 //add services of filesservice here
@@ -38,7 +48,7 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.MapControllers();
-
+app.UseCors("AllowSpecificOrigin");
 app.Run();
 
 

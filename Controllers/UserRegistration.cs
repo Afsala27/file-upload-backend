@@ -15,7 +15,7 @@ namespace FileUploadApplication.Controllers
     [ApiController]
     public class UserRegistrationController : ControllerBase
     {
-         private IValidator<UserData> _validator;
+        private IValidator<UserData> _validator;
         private readonly DataContext _context;
 
         public UserRegistrationController(DataContext context, IValidator<UserData> validator)
