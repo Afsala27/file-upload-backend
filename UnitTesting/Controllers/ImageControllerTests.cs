@@ -144,7 +144,6 @@ namespace UnitTesting.Controllers
             var mockImageRepository = new Mock<IImageRepository>();
             var controller = new ImageFilesController(mockGoogleDriveService.Object, mockImageRepository.Object, mockLogger.Object);
 
-            // Simulate repository returning null (data not found)
             mockImageRepository.Setup(repo => repo.GetByIdAsync(imgDataId))
                 .ReturnsAsync((ImgData?)null);
 

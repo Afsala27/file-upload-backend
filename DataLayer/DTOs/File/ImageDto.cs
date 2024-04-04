@@ -13,6 +13,9 @@ namespace DataLayer.DTOs.File
         public required string ? ImageData { get; set; }
         public required string? DriveFileId { get; set; }
         public required string? Caption { get; set; }
-        public int UserId { get; set; }
+        public string? Comment{ get; set; }
+
+        [Required]
+        public string? Id { get; set; }
     }
 }

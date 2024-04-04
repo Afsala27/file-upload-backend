@@ -8,6 +8,7 @@ C:\Users\admin\Desktop\ASP DOT NET CORE\UploadApi\RepositoryLayer\obj\Debug\net8
 C:\Users\admin\Desktop\ASP DOT NET CORE\UploadApi\RepositoryLayer\obj\Debug\net8.0\RepositoryLayer.AssemblyInfoInputs.cache
 C:\Users\admin\Desktop\ASP DOT NET CORE\UploadApi\RepositoryLayer\obj\Debug\net8.0\RepositoryLayer.AssemblyInfo.cs
 C:\Users\admin\Desktop\ASP DOT NET CORE\UploadApi\RepositoryLayer\obj\Debug\net8.0\RepositoryLayer.csproj.CoreCompileInputs.cache
+C:\Users\admin\Desktop\ASP DOT NET CORE\UploadApi\RepositoryLayer\obj\Debug\net8.0\RepositoryLayer.sourcelink.json
 C:\Users\admin\Desktop\ASP DOT NET CORE\UploadApi\RepositoryLayer\obj\Debug\net8.0\RepositoryLayer.csproj.CopyComplete
 C:\Users\admin\Desktop\ASP DOT NET CORE\UploadApi\RepositoryLayer\obj\Debug\net8.0\RepositoryLayer.dll
 C:\Users\admin\Desktop\ASP DOT NET CORE\UploadApi\RepositoryLayer\obj\Debug\net8.0\refint\RepositoryLayer.dll

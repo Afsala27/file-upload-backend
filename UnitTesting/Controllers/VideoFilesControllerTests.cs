@@ -34,7 +34,6 @@ namespace UnitTesting.Controllers
             var uniqueFileName = "testfile.jpg";
             var imgData = new ImgData { ImgDataId = 1, Caption = "test", DriveFileId = fileId, ImageData = "", VideoData= uniqueFileName };
 
-            // Set up the mock GoogleDriveService to return a file ID
             mockGoogleDrive.Setup(service => service.UploadFileAsync(It.IsAny<IFormFile>(), It.IsAny<string>()))
                 .ReturnsAsync(fileId);
 
@@ -83,7 +82,6 @@ namespace UnitTesting.Controllers
             var mockRepository = new Mock<IImageRepository>();
             var controller = new VideoFilesController(mockRepository.Object, mockGoogleDriveService.Object, mockLogger.Object);
 
-            // Assuming that you have a valid file content to return
             byte[] fileContent = new byte[] { 0x12, 0x34, 0x56, 0x78 };
             mockGoogleDriveService.Setup(service => service.DownloadFileAsync(fileId))
                 .ReturnsAsync(fileContent);
@@ -107,7 +105,7 @@ namespace UnitTesting.Controllers
             var mockGoogleDriveService = new Mock<IGoogleDrive>();
             var mockRepository = new Mock<IImageRepository>();
             var controller = new VideoFilesController(mockRepository.Object, mockGoogleDriveService.Object, mockLogger.Object);
-            // Assuming that an exception is thrown when trying to download the file
+
             mockGoogleDriveService.Setup(service => service.DownloadFileAsync(fileId))
                 .ThrowsAsync(new Exception("File not found"));
 
