@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using DataLayer.DTOs.User;
 using DataLayer.Entities;
 
 namespace RepositoryLayer.Interfaces
@@ -8,10 +9,11 @@ namespace RepositoryLayer.Interfaces
     {
         Task<UserData?> GetByIdAsync(int id);
         //Task<IEnumerable<UserData>> GetAllAsync();
-        Task AddAsync(UserData user);
+        //Task AddAsync(UserDto user);
 
         Task<UserData?> GetByEmailAsync(string? email);
+        void GetByEmailAsync();
         //Task UpdateAsync(User user);
-       // Task DeleteAsync(int id);
+        // Task DeleteAsync(int id);
     }
 }

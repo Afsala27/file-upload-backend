@@ -64,7 +64,6 @@ namespace InfrastructureLayer.Services
                 string errorMessage = "An error occurred while downloading the file: " + ex.Message;
                 // Log the error
                 //_logger.LogError(errorMessage);
-                // You might also want to handle the exception differently depending on your application requirements
                 throw new Exception(errorMessage, ex); // Rethrow the exception with a more descriptive message
             }
             finally
@@ -72,5 +71,23 @@ namespace InfrastructureLayer.Services
                 stream.Close();
             }
     }
-}
+
+    public async Task<byte[]> GetImageContentFromDriveAsync(string fileId)
+    {
+        // Make a request to Google Drive API to retrieve image content
+        var request = _driveService.Files.Get(fileId);
+        using var stream = new MemoryStream();
+        await request.DownloadAsync(stream);
+        return stream.ToArray();
+    }
+
+        public async Task<byte[]> GetVideoContentFromDriveAsync(string fileId)
+        {
+            var request = _driveService.Files.Get(fileId);
+            request.Fields = "videoMediaMetadata";
+            using var stream = new MemoryStream();
+            await request.DownloadAsync(stream);
+            return stream.ToArray();
+        }
+    }
 }

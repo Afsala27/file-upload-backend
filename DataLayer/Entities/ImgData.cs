@@ -18,8 +18,9 @@ namespace DataLayer.Entities
         public required string? DriveFileId { get; set; }
 
         // adding forien key to the img data
-        public int UserId { get; set; }
-        public UserData? UserData ;
+        public string? Id { get; set; }
+
+        public AppUser? AppUsers ;
 
     }
 

@@ -13,5 +13,11 @@ namespace RepositoryLayer.Interfaces
         Task UpdateAsync(ImgData images);
         Task DeleteAsync(ImgData images);
         Task UpdateCommentAsync(int imgDataId, string? newComment);
+
+        Task <List<ImgData>> GetAllAsync();
+
+        Task<ImgData?> GetByFileIdAsync(string id);
+
+        Task<List<string>> GetFileIdsAsync();
     }
 }

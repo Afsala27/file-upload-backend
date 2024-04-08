@@ -11,5 +11,9 @@ namespace InfrastructureLayer.Interfaces
         Task<string?> UploadFileAsync (IFormFile file, string filename);
 
         Task<byte[]> DownloadFileAsync(string fileId);
+
+        Task<byte[]> GetImageContentFromDriveAsync(string fileId);
+
+        Task <byte[]> GetVideoContentFromDriveAsync(string fileId);
     }
 }

@@ -37,5 +37,10 @@ namespace RepositoryLayer.Repositories
         {
             return await _dbContext.UserDatas.FirstOrDefaultAsync(u => u.Email == email);
         }
+
+        public void GetByEmailAsync()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

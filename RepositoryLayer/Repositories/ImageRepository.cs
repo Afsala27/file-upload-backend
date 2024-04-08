@@ -61,5 +61,25 @@ namespace RepositoryLayer.Repositories
                 await _dbContext.SaveChangesAsync();
             }
         }
+
+        public async Task<List<ImgData>> GetAllAsync()
+        {
+            return await _dbContext.ImgDatas.ToListAsync();
+        }
+
+        public async Task<List<string>> GetFileIdsAsync()
+        {
+            // Assuming you have an entity named ImageData with a property named FileId
+            return await _dbContext.ImgDatas.Select(image => image.DriveFileId).ToListAsync();
+        }
+
+        public async Task<ImgData?> GetByFileIdAsync(string id)
+        {
+             return await _dbContext.ImgDatas.FindAsync(id);
+        }
+        // Task<ImgData?> IImageRepository.GetAllAsync()
+        // {
+        //     throw new NotImplementedException();
+        // }
     }
 }

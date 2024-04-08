@@ -178,3 +178,9 @@ C:\Users\admin\Desktop\ASP DOT NET CORE\UploadApi\UnitTesting\bin\Debug\net8.0\D
 C:\Users\admin\Desktop\ASP DOT NET CORE\UploadApi\UnitTesting\bin\Debug\net8.0\RepositoryLayer.pdb
 C:\Users\admin\Desktop\ASP DOT NET CORE\UploadApi\UnitTesting\bin\Debug\net8.0\InfrastructureLayer.pdb
 C:\Users\admin\Desktop\ASP DOT NET CORE\UploadApi\UnitTesting\bin\Debug\net8.0\FileUploadApplication.pdb
+c:\Users\admin\Desktop\ASP DOT NET CORE\UploadApi\UnitTesting\obj\Debug\net8.0\UnitTesting.sourcelink.json
+c:\Users\admin\Desktop\ASP DOT NET CORE\UploadApi\UnitTesting\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+c:\Users\admin\Desktop\ASP DOT NET CORE\UploadApi\UnitTesting\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+c:\Users\admin\Desktop\ASP DOT NET CORE\UploadApi\UnitTesting\bin\Debug\net8.0\Hellang.Middleware.ProblemDetails.dll
+c:\Users\admin\Desktop\ASP DOT NET CORE\UploadApi\UnitTesting\bin\Debug\net8.0\Serilog.Enrichers.Process.dll
+c:\Users\admin\Desktop\ASP DOT NET CORE\UploadApi\UnitTesting\bin\Debug\net8.0\Serilog.Enrichers.Thread.dll
